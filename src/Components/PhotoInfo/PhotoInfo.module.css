@@ -1,0 +1,183 @@
+.container {
+    display: flex;
+    gap: 8vw;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, rgb(255, 187, 0), rgb(255, 123, 0));
+    height: 50vw;
+}
+
+.photo {
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-150px);
+    animation: image 1s linear 1 forwards;
+    width: 45%;
+    opacity: 0;
+}
+
+
+
+@keyframes image {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.info {
+    width: 55%;
+}
+
+header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 1.2vw 2.5vw;
+    font-size: clamp(0.5rem, 1.5vw, 1.2rem);
+    background-color: white;
+    border-radius: 30px;
+    margin-top: clamp(0.5rem, 1.5vw, 1.2rem);
+    z-index: 1;
+}
+
+header a {
+    color: rgb(255, 174, 0);
+    font-weight: 500;
+}
+
+
+
+.photo img {
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 500px 500px;
+    object-fit: cover;
+    border: min(6px,0.8vw) solid yellow;
+    border-top: 0;
+}
+
+
+
+.info {
+    padding-left: clamp(1rem, 6vw, 80px);
+}
+
+
+.name {
+    position: relative;
+    margin-bottom: 4vw;
+    z-index: 0;
+    opacity: 0;
+    transform: translateY(-150px);
+    animation: nameSlide 2s ease 1 forwards;
+}
+
+@keyframes nameSlide {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.name h1 {
+    color: white;
+    padding: clamp(0.5rem, 2vw, 2rem) clamp(0.5rem, 1.5vw, 2rem);
+    background-color: rgb(255, 166, 0);
+    border-radius: clamp(0.6rem, 1.5vw, 3.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1rem, 3.5vw, 3.5rem);
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+
+.name h1::after {
+    content: "";
+    position: absolute;
+    height: clamp(100% + 7px, 100% + 1vw, 100% + 10px);
+    width: clamp(100% + 7px, 100% + 1vw, 100% + 10px);
+    background: conic-gradient(from var(--angle), rgb(255, 255, 255), rgb(255, 255, 0));
+    border-radius: clamp(0.6rem, 1.5vw, 3.5rem);
+    z-index: -1;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+
+
+.speciality {
+    border-left: 2px solid white;
+    padding-left: 20px;
+    transform: translateY(80px);
+    color: white;
+    animation: infoSlide 1.5s ease 1 forwards;
+    opacity: 0;
+}
+
+@keyframes infoSlide {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.speciality p {
+    transform: translateY(100px);
+    animation: infoSlide 1.5s ease 1 forwards;
+    opacity: 0;
+    font-size: clamp(0.5rem, 1.7vw, 1.5rem);
+}
+
+.speciality h2 {
+    color: rgb(255, 255, 56);
+    font-size: clamp(1rem, 2.5vw, 3rem);
+    margin-bottom: clamp(.2rem, 0.8vw, 1.5rem);
+    display: inline-block;
+    border-right: min(3px,0.5vw) solid white;
+    transform: translateY(90px);
+    opacity: 0;
+    animation: cursor 0.8s step-end infinite,
+        typing 2s steps(16) infinite alternate,
+        infoSlide 1.5s ease 1 forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 17.1ch;
+    }
+}

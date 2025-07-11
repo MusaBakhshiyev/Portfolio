@@ -1,0 +1,46 @@
+.container {
+    padding: clamp(1rem, 6vw, 80px);
+    background: linear-gradient(180deg, rgb(255, 187, 0), rgb(255, 123, 0));
+    
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.contacts img {
+    width: 40%;
+    border-radius: 50%;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact h1 {
+    font-size: clamp(0.5rem, 3.5vw, 3rem);
+    color: white;
+    box-shadow: 0 0 5px black;
+    padding: min(20px,2vw);
+    border-radius: min(25px,2.5vw);
+    display: inline-block;
+    margin-bottom: 20px;
+    width: max-content;
+}
+
+.info {
+    font-size: clamp(0.5rem, 1.2vw, 3rem);
+    color: white;
+}
+
+.media {
+    display: flex;
+    gap: 5px;
+}
+
+.media svg {
+    font-size: 3em;
+}
