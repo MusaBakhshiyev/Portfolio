@@ -18,8 +18,8 @@ function App() {
       <About />
       <Certificate />
       <Works />
-      <Service/>
-      <Contact/>
+      <Service />
+      <Contact />
     </div>
   )
 }
