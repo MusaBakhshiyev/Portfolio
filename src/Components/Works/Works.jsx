@@ -12,7 +12,7 @@ import { useRef, useState } from 'react';
 
 export default function Works() {
   const [list, setList] = useState([
-    { image: MovieLogin, description: "Movie Website showcasing Azerbaijani movies.", skills: "Backend and Frontend" },
+    { image: MovieLogin, description: "Movie Website about Azerbaijani movies.", skills: "Backend and Frontend" },
     { image: GadGetHeader, description: "GadGetAll - Electronics e-commerce website.", skills: "Frontend only" },
     { image: TraversalHeader, description: "Traversal - Travel and tourism website.", skills: "Backend only" },
     { image: Currency, description: "Currency Converter web application.", skills: "Frontend only" },

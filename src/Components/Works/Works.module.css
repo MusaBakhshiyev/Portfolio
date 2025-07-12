@@ -1,5 +1,5 @@
 .container {
-    padding: 40px 0;
+    padding: 0 0 clamp(1rem, 6vw, 80px);
     background: linear-gradient(0deg, rgb(255, 187, 0), rgb(255, 123, 0));
 }
 
@@ -7,6 +7,21 @@
     display: flex;
     border-top: 5px solid rgb(255, 255, 255);
     border-bottom: 5px solid rgb(255, 255, 255);
+    animation: projectSlider 1s linear 1 forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+
+@keyframes projectSlider {
+    from {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .description {
@@ -24,9 +39,6 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    animation: textAppear 1s ease-in 1 forwards;
-    animation-timeline: view();
-    animation-range: entry 0% cover 70%;
 }
 
 @keyframes textAppear {
@@ -61,11 +73,11 @@
 .detail p:first-child {
     color: rgb(255, 255, 0);
     font-weight: 600;
-    font-size: clamp(0.7rem, 1.8vw, 2rem);
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
 }
 
 .detail p:nth-child(2) {
-    font-size: clamp(0.6rem, 1.6vw, 1.6rem);
+    font-size: clamp(0.4rem, 1.8vw, 1.5rem);
 }
 
 
@@ -80,7 +92,7 @@
     padding: min(5px, 0.8vw) min(10px, 1vw);
     border-radius: min(5px, 0.5vw);
     font-weight: 600;
-    font-size: clamp(0.6rem, 1.5vw, 1.5rem);
+    font-size: clamp(0.4rem, 1.7vw, 1.5rem);
     position: relative;
     display: flex;
     align-items: center;
@@ -128,26 +140,17 @@
 
 .title {
     background: conic-gradient(from 45deg at 82% 50%, transparent 25%, rgb(255, 220, 0) 25%);
-    width: 100%;
-    animation: titleSlide 0.5s linear 1 forwards;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    width: 36%;
     z-index: 2;
-}
-
-@keyframes titleSlide {
-    to {
-        width: 40%;
-    }
 }
 
 
 .title>h1 {
     color: white;
-    font-size: clamp(0.5rem, 3.5vw, 3rem);
+    font-size: clamp(0.7rem, 3.5vw, 3rem);
     padding: min(23px, 3vw) 0;
     width: 100%;
-    padding-left: clamp(1rem, 6vw, 80px);
+    padding-left: clamp(0.5rem, 6vw, 80px);
 }
 
 .works {
@@ -157,6 +160,9 @@
     box-shadow: 0px 0 10px rgb(255, 94, 0);
     overflow: hidden;
     border-bottom: 5px solid rgb(255, 255, 255);
+    animation: projectSlider 1s linear 1 forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
 
 .work {
@@ -199,23 +205,11 @@
     top: 40%;
     left: 50px;
     color: white;
-    font-size: 2em;
     width: 400px;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 20px;
 }
-
-.work .info h2 {
-    color: #ffd904;
-    margin-bottom: 50px;
-    font-size: 2em;
-}
-
-.work .info p {
-    font-size: 0.7em;
-}
-
 
 .thumbnail {
     position: absolute;
@@ -335,4 +329,16 @@
     width: 0;
     opacity: 0;
     animation: lastImage 0.5s linear 1 forwards;
+}
+
+
+@media (max-width:1000px) {
+    .info {
+        animation-range: entry 0% cover 30%;
+    }
+
+    .works {
+        animation-range: entry 0% cover 20%;
+    }
+
 }

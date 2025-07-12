@@ -12,7 +12,7 @@ export default function Service() {
                 <div className={style.service}>
                     <div className={style.serviceInner}>
                         <h2>Backend Development
-                            <p>I have experience in .Net (C#, Window Forms) ASP.Net (MVC, Razor Pages). I have also used authentication and authorizen procce.</p>
+                            <p>I have experience in authentication and authorization processes, RESTful APIs, Entity Framework Core, and architectural patterns such as the Repository Pattern, Unit of Work (UoW), and Onion Architecture.</p>
                         </h2>
                         <img src={backend} alt="backend" />
 
@@ -23,7 +23,7 @@ export default function Service() {
                 <div className={style.service}>
                     <div className={style.serviceInner}>
                         <h2>Frontend Development
-                            <p>I have experience in React, CSS, HTML, JavaScript, Node.js</p>
+                            <p>I use Redux for state management, CSS Modules for styling, and Axios or Fetch for data fetching. I work with React Router and follow a modular, component-based architecture. I also have experience with localStorage and IndexedDB.</p>
                         </h2>
                         <img src={frontend} alt="frontend" />
                         <div className={style.content}></div>

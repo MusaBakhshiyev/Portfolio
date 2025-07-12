@@ -1,46 +1,159 @@
 .container {
     padding: clamp(1rem, 6vw, 80px);
     background: linear-gradient(180deg, rgb(255, 187, 0), rgb(255, 123, 0));
-    
+
 }
 
 .contacts {
     display: flex;
     justify-content: space-between;
     align-self: center;
+    gap: 10px;
 }
 
 .contacts img {
-    width: 40%;
-    border-radius: 50%;
+    width: 34%;
+    opacity: 0;
+    aspect-ratio: 1/1.4;
+    object-fit: cover;
+    border-radius: 0 0 300px 300px;
+    background-color: rgb(255, 179, 0);
+    animation: imageOpacity 1s linear 1 forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
 }
-.contact{
+
+@keyframes imageOpacity {
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes contactSlider {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 55%;
+    animation: contactSlider 1s linear 1 forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .contact h1 {
-    font-size: clamp(0.5rem, 3.5vw, 3rem);
+    font-size: clamp(0.7rem, 3vw, 3rem);
     color: white;
-    box-shadow: 0 0 5px black;
-    padding: min(20px,2vw);
-    border-radius: min(25px,2.5vw);
+    padding: min(20px, 2vw);
+    border-radius: min(25px, 2.5vw);
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: min(25px, 3vw);
     width: max-content;
+    animation: shadow 1s ease infinite alternate;
+}
+
+@keyframes shadow {
+    from {
+        box-shadow: 0 0 0px white;
+    }
+
+    to {
+        box-shadow: 0 0 min(30px, 3vw) white;
+    }
 }
 
 .info {
-    font-size: clamp(0.5rem, 1.2vw, 3rem);
+    font-size: clamp(0.6rem, 1.6vw, 1.5rem);
     color: white;
+    font-weight: 500;
+    animation: contactSlider 1s linear 1 forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.info>div:not(:last-child) {
+    border-bottom: min(3px, 0.5vw) solid white;
+    margin-bottom: min(15px, 1.5vw);
+}
+
+.info>div:not(:last-child) p:first-child {
+    color: yellow;
+
 }
 
 .media {
     display: flex;
-    gap: 5px;
+    gap: min(5px, 0.5vw);
 }
 
 .media svg {
-    font-size: 3em;
+    font-size: clamp(0.8rem, 4vw, 3rem);
+    color: white;
+}
+
+@media (min-width: 1000px) and (max-width:1200px) {
+    .contacts img {
+        animation-range: entry 0% cover 40%;
+    }
+
+    .contact {
+        animation-range: entry 0% cover 40%;
+    }
+
+    .info {
+        animation-range: entry 0% cover 40%;
+    }
+}
+
+@media (min-width: 750px) and (max-width:999px) {
+    .contacts img {
+        animation-range: entry 0% cover 30%;
+    }
+
+    .contact {
+        animation-range: entry 0% cover 30%;
+    }
+
+    .info {
+        animation-range: entry 0% cover 20%;
+    }
+}
+
+@media (min-width: 500px) and (max-width:759px) {
+    .contacts img {
+        animation-range: entry 0% cover 20%;
+    }
+
+    .contact {
+        animation-range: entry 0% cover 20%;
+    }
+
+    .info {
+        animation-range: entry 0% cover 12%;
+    }
+}
+
+@media (max-width:499px) {
+    .contacts img {
+        animation-range: entry 0% cover 10%;
+    }
+
+    .contact {
+        animation-range: entry 0% cover 10%;
+    }
+
+    .info {
+        animation-range: entry 0% cover 5%;
+    }
 }

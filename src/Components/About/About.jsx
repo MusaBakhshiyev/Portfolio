@@ -6,9 +6,8 @@ export default function About() {
             <div className={style.about}>
                 <h1 id='about'>About me</h1>
                 <p>I am a Computer Engineering student with a solid understanding of backend
-                    development and hands-on experience with SQL databases as well as frontend technologies. I can use Git
-                    for version control and collaboration. I enjoy solving problems and learning
-                    new technologies. I am responsible, detail-oriented, and work well both
+                    development, SQL databases as well as frontend technologies. I can use Git
+                    for version control and collaboration. I am responsible, detail-oriented, and work well both
                     independently and in a team. I always try to improve my skills and write clean,
                     efficient code by working on different projects</p>
             </div>
