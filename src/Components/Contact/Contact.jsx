@@ -5,7 +5,7 @@ import { FaGithubSquare } from "react-icons/fa";
 
 export default function Contact() {
     return (
-        <div className={style.container}>
+        <div id="contact" className={style.container}>
             <div className={style.contacts}>
 
                 <img src={costume} alt="me" />

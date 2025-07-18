@@ -9,19 +9,17 @@ import ReactMovie from "../../images/ReactMovie/ReactMovie.png";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { TfiArrowCircleLeft } from "react-icons/tfi";
 import { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import portfolioData from "../../data/portfolioData.js"
 
 export default function Works() {
-  const [list, setList] = useState([
-    { image: MovieLogin, description: "Movie Website about Azerbaijani movies.", skills: "Backend and Frontend" },
-    { image: GadGetHeader, description: "GadGetAll - Electronics e-commerce website.", skills: "Frontend only" },
-    { image: TraversalHeader, description: "Traversal - Travel and tourism website.", skills: "Backend only" },
-    { image: Currency, description: "Currency Converter web application.", skills: "Frontend only" },
-    { image: ReactMovie, description: "React Movie Website using movie APIs.", skills: "Frontend only" }
-  ]);
+  const [list, setList] = useState(portfolioData);
 
   const [btn, setBtn] = useState('');
   const [change, setChange] = useState('');
   const timerRef = useRef(null);
+
+  const navigate = useNavigate();
 
   const next = () => {
     const newList = [...list];
@@ -46,18 +44,18 @@ export default function Works() {
   }
 
   return (
-    <div className={style.container}>
+    <div id="portfolio" className={style.container}>
       <div className={style.info}>
         <div className={`${style.title} ${style[change]}`}>
           <h1>My Projects</h1>
-        </div> 
+        </div>
 
         <div className={`${style.description}`}>
           <div className={`${style.detail} ${style[change]}`}>
             <p>{list[0].skills}:</p>
             <p>{list[0].description}</p>
           </div>
-          <div className={style.more}>
+          <div className={style.more} onClick={() => navigate('/PortfolioDetail', { state: { project: list[0] } })}>
             <p>More Details</p>
           </div>
         </div>
@@ -66,8 +64,8 @@ export default function Works() {
       <div className={`${style.works} ${style[btn]}`}>
 
         {list.map(l =>
-          <div className={style.work} key={l.image}>
-            <img src={l.image} alt="project image" />
+          <div className={style.work} key={l.id}>
+            <img src={l.images[0]} alt="project image" />
             <div className={style.content}>
             </div>
           </div>
@@ -76,9 +74,9 @@ export default function Works() {
 
         <div className={style.thumbnail}>
           {list.map((l, i) => i != 0 &&
-            <img src={l.image} alt="sites " />
+            <img src={l.images[0]} alt="sites " />
           )}
-          <img src={list[0].image} alt="sites" />
+          <img src={list[0].images[0]} alt="sites" />
         </div>
 
 
@@ -90,7 +88,7 @@ export default function Works() {
         </div>
       </div>
 
-    </div>
+    </div >
   )
 }
 

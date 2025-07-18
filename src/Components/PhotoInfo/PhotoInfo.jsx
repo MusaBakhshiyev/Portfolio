@@ -29,9 +29,9 @@ export default function PhotoInfo() {
             <div className={style.photo}>
                 <header className="header">
                     <a href="#about">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Portfolio</a>
-                    <a href="#">Contact</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#service">Services</a>
+                    <a href="#contact">Contact</a>
                 </header>
                 <img src={my_photo} alt="my photo" />
             </div>

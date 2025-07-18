@@ -2,9 +2,9 @@ import style from './About.module.css';
 
 export default function About() {
     return (
-        <div className={style.container}>
+        <div id='about' className={style.container}>
             <div className={style.about}>
-                <h1 id='about'>About me</h1>
+                <h1>About me</h1>
                 <p>I am a Computer Engineering student with a solid understanding of backend
                     development, SQL databases as well as frontend technologies. I can use Git
                     for version control and collaboration. I am responsible, detail-oriented, and work well both

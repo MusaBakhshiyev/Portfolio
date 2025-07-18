@@ -4,7 +4,7 @@ import frontend from '../../images/Services/frontend.png'
 
 export default function Service() {
     return (
-        <div className={style.container}>
+        <div id='service' className={style.container}>
             <div className={style.title}>
                 <h1>Services</h1>
             </div>
