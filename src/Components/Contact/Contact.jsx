@@ -20,6 +20,14 @@ export default function Contact() {
                             <p>My number:</p>
                             <p>+994 55 942 35 12</p>
                         </div>
+                        <div>
+                            <p>My CV:</p>
+                            <p>
+                                <a href="MusaBakhshiyev_CV.pdf" target="blank" rel="noopener noreferrer">
+                                    View CV
+                                </a>
+                            </p>
+                        </div>
 
                         <div className={style.social}>
                             <div className={style.media}>

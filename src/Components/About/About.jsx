@@ -40,15 +40,13 @@ export default function About() {
                     <h2>Skills</h2>
                     <ul>
                         <li>.Net (C#, Windows Forms)</li>
-                        <li>Asp.Net (MVC, Razor Pages)</li>
-                        <li>Html, Css</li>
-                        <li>Javascipt, React</li>
-                        <li>Node.js, Express</li>
-                        <li>SQL (MS Sql, Oracle, My SQL)</li>
+                        <li>ASP.NET (MVC, Razor Pages, Blazor)</li>
+                        <li>Spring Boot (Java, MVC, Thymeleaf)</li>
+                        <li>SQL (SQL Server, Oracle, MySQL, PostgreSQL)</li>
+                        <li>HTML, CSS, JavaScript, TypeScript, Bootsrap</li>
+                        <li>React, Node.js, Express.js</li>
                         <li>Git, GitHub</li>
-                        <li>Algorithms</li>
-                        <li>Problem Solving</li>
-
+                        <li>Algorithms, Problem Solving</li>
                     </ul>
                 </div>
             </div>

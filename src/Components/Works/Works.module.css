@@ -259,12 +259,12 @@
 
 .works.next .work:nth-child(1) {
     z-index: 3;
-    width: 150px;
-    height: 200px;
+    width: min(150px, 10vw);
+    height: min(200px, 12vw + min(50px, 3vw));
     object-fit: cover;
     border-radius: 20px;
     position: absolute;
-    bottom: 30px;
+    bottom: min(30px, 3vw);
     left: 50%;
     animation: next 0.5s linear 1 forwards;
 }
@@ -285,7 +285,7 @@
 
 @keyframes lastImage {
     to {
-        width: 150px;
+        width: min(150px, 10vw);
     }
 
 }
@@ -315,8 +315,7 @@
 
 @keyframes prev {
     to {
-
-        bottom: 30px;
+        bottom: min(30px, 3vw);
         left: 50%;
         width: min(150px, 10vw);
         height: min(200px, 12vw + min(50px, 3vw));

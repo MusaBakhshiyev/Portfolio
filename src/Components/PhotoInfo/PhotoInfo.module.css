@@ -105,8 +105,8 @@ header a {
 .name h1::after {
     content: "";
     position: absolute;
-    height: clamp(100% + 7px, 100% + 1vw, 100% + 10px);
-    width: clamp(100% + 7px, 100% + 1vw, 100% + 10px);
+    height: clamp(100% + 6px, 100% + 1vw, 100% + 10px);
+    width: clamp(100% + 6px, 100% + 1vw, 100% + 10px);
     background: conic-gradient(from var(--angle), rgb(255, 255, 255), rgb(255, 255, 0));
     border-radius: clamp(0.6rem, 1.5vw, 3.5rem);
     z-index: -1;

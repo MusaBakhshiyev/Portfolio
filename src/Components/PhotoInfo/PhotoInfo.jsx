@@ -23,7 +23,7 @@ export default function PhotoInfo() {
                 </div>
                 <div className={style.speciality}>
                     <h2>{jobs[index]}</h2>
-                    <p>Hello! I’m Musa, a full-stack developer and Computer Engineering student who enjoys building creative, functional, and user-friendly web applications using .NET and React.</p>
+                    <p>Hello! I’m Musa, a full-stack developer and Computer Engineering student who enjoys building creative, functional, and user-friendly web applications using .NET, Spring Boot and React.</p>
                 </div>
             </div>
             <div className={style.photo}>

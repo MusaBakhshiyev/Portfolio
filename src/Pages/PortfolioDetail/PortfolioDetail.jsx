@@ -9,6 +9,8 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
+import { RxDoubleArrowRight } from "react-icons/rx";
+
 export default function PortfolioDetail() {
     const navigate = useNavigate();
     const location = useLocation();
@@ -17,6 +19,7 @@ export default function PortfolioDetail() {
         <div className={style.container}>
             <div className={style.title}>
                 <h1 onClick={() => navigate("/")}>Home Page</h1>
+                <span><RxDoubleArrowRight/></span>
                 <h1>{project.name}</h1>
             </div>
 
@@ -45,8 +48,16 @@ export default function PortfolioDetail() {
             </Swiper>
 
             <div className={style.info}>
-                <h1>Used Technologies: {project.technologies.join(", ")}</h1>
                 <p>{project.info}</p>
+                <div>
+                    <h1>Used Technologies:</h1>
+                    <ul>
+                        {project.technologies.map((tech, index) => (
+                            <li key={index}>{tech}</li>
+                        ))}
+                    </ul>
+                    
+                </div>
             </div>
 
         </div>

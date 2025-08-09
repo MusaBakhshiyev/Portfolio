@@ -12,7 +12,7 @@ export default function Service() {
                 <div className={style.service}>
                     <div className={style.serviceInner}>
                         <h2>Backend Development
-                            <p>I have experience in authentication and authorization processes, RESTful APIs, Entity Framework Core, and architectural patterns such as the Repository Pattern, Unit of Work (UoW), and Onion Architecture.</p>
+                            <p>I have experience in authentication and authorization processes, RESTful APIs and architectural patterns such as the Repository Pattern, Unit of Work (UoW), and Onion Architecture.</p>
                         </h2>
                         <img src={backend} alt="backend" />
 
